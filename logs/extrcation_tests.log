@@ -1,0 +1,34 @@
+2026-05-18 08:31:06,410-INFO-Found credentials in shared credentials file: ~/.aws/credentials
+2026-05-18 08:31:08,623-INFO-Mysql databse connection is being established..
+2026-05-18 08:31:08,932-INFO-Mysql databse connection has been successfully established..
+2026-05-18 08:31:08,934-INFO-Test case name :test_DE_between_source_supplier_file_to_target_as_staging
+2026-05-18 08:31:08,935-INFO-Test case test_DE_between_source_supplier_file_to_target_as_staging execution has started..
+2026-05-18 08:31:09,010-INFO-Expected data from the file is    supplier_id         supplier_name    contact_name  ...    country rating last_order_date
+0          101      ABC Distributors        John Doe  ...        USA    4.8      2024-11-20
+1            2     Global Goods Inc.      Jane Smith  ...     Canada    4.3      2024-11-19
+2            3   GreenTech Solutions  Robert Johnson  ...         UK    4.6      2024-11-18
+3            4              EuroWare     Emily White  ...    Germany    4.2      2024-11-22
+4            5      Pacific Products   Michael Brown  ...  Australia    4.7      2024-11-17
+5            6     Fresh Produce Co.    Sarah Taylor  ...     France    4.4      2024-11-21
+6            7  TechCore Electronics       David Lee  ...      Japan    4.9      2024-11-23
+7            8       HanYang Trading      Laura King  ...      China    4.1      2024-11-16
+8            9         Indo Supplies  James Williams  ...      India    4.3      2024-11-25
+9           10         LatAm Imports   Olivia Harris  ...     Mexico    4.5      2024-11-20
+
+[10 rows x 8 columns]
+2026-05-18 08:31:09,091-INFO-Actual data from the databse is    supplier_id         supplier_name    contact_name  ...    country rating last_order_date
+0            1      ABC Distributors        John Doe  ...        USA    4.8      2024-11-20
+1            2     Global Goods Inc.      Jane Smith  ...     Canada    4.3      2024-11-19
+2            3   GreenTech Solutions  Robert Johnson  ...         UK    4.6      2024-11-18
+3            4              EuroWare     Emily White  ...    Germany    4.2      2024-11-22
+4            5      Pacific Products   Michael Brown  ...  Australia    4.7      2024-11-17
+5            6     Fresh Produce Co.    Sarah Taylor  ...     France    4.4      2024-11-21
+6            7  TechCore Electronics       David Lee  ...      Japan    4.9      2024-11-23
+7            8       HanYang Trading      Laura King  ...      China    4.1      2024-11-16
+8            9         Indo Supplies  James Williams  ...      India    4.3      2024-11-25
+9           10         LatAm Imports   Olivia Harris  ...     Mexico    4.5      2024-11-20
+
+[10 rows x 8 columns]
+2026-05-18 08:31:09,132-ERROR-there is exception raised while checkThere are extra rows in expected    supplier_id     supplier_name contact_name        contact_email contact_phone country  rating last_order_date
+0          101  ABC Distributors     John Doe  johndoe@abcdist.com   +1-555-0100     USA     4.8      2024-11-20
+2026-05-18 08:31:10,447-INFO-Mysql databse connection has been closed..
