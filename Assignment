@@ -1,6 +1,4 @@
-
- 1. Assigment : Find extra / non matching rows in actual dataframe
-      Assertion for extra rows in actual data
- 2. Apply the same logic for all the other files ( 2 )
-
- 3. Write a utility method for comparing between database to database
+1. Please complete rest 3 test cases excpt for Linux one
+a) file to db
+b) s3 to db
+c) db to db

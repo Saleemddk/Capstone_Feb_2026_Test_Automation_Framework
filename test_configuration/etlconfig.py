@@ -12,7 +12,7 @@ MYSQL_HOST = "localhost"
 MYSQL_PORT = 3308
 MYSQL_DATABASE = "Feb2026Retaildwh"
 
- # Linux server details
+# Linux server details
 LIUNX_HOSTNAME = "192.168.0.5"
 LIUNX_USERNAME = "etlqalabs"
 LIUNX_PASSWORD = "root"

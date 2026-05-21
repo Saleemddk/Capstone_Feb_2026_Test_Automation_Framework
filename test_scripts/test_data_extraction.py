@@ -8,7 +8,7 @@ import logging
 
 
 # Logging configuration
-from common_utilities.utilities import verify_expected_as_file_to_actual_as_database
+from common_utilities.utilities import *
 from test_configuration.etlconfig import *
 
 logging.basicConfig(
@@ -21,27 +21,24 @@ logger = logging.getLogger(__name__)
 
 @pytest.mark.usefixtures("connect_to_mysql_database")
 class TestDataExtraction:
+    validation_utility = ValidationUtility()
 
-    def test_DE_between_source_supplier_file_to_target_as_staging(self,connect_to_mysql_database):
+    def test_data_extraction_from_supplier_to_stage(self,connect_to_mysql_database):
         try:
             test_case_name = inspect.currentframe().f_code.co_name
-            logger.info(f"Test case name :{test_case_name}")
-            logger.info(f"Test case {test_case_name} execution has started..")
-            query_actual = """select * from stag_supplier"""
-            verify_expected_as_file_to_actual_as_database\
-                ("test_data/supplier_data.json","json", connect_to_mysql_database,query_actual,
-                                                      test_case_name=test_case_name)
+            actual_query = """select * from stag_supplier"""
+            self.validation_utility.execute_validation(
+                validation_type="FILE_TO_DB",
+                test_case_name = test_case_name,
+                file_path="test_data/supplier_data.json",
+                file_type="json",
+                query_actual=actual_query,
+                db_actual=connect_to_mysql_database)
         except Exception as e:
-            logger.error(f"Test case {test_case_name} execution has failed..")
-            pytest.fail(f"Test case {test_case_name} execution has failed..")
+            logger.error(f"supplier data extrcation valodation failed {e}")
 
 
-'''    def test_DE_between_source_inventory_file_to_target_as_staging(self,connect_to_mysql_database):
-        df_expected = pd.read_xml("test_data/inventory_data.xml", xpath=".//item")
-        query_actual = """select * from stag_inventory"""
-        df_actual = pd.read_sql(query_actual, connect_to_mysql_database)
-        assert df_actual.equals(df_expected), "Inventory data did not extract correctly"
 
 
-'''
+
 
