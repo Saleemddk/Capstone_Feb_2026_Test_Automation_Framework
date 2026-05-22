@@ -1,30 +1,4 @@
-2026-05-21 08:50:51,359-INFO-Mysql databse connection is being established..
-2026-05-21 08:50:51,461-INFO-Mysql databse connection has been successfully established..
-2026-05-21 08:50:51,490-INFO-expected data   supplier_id         supplier_name    contact_name  ...    country rating last_order_date
-0           1      ABC Distributors        John Doe  ...        USA    4.8      2024-11-20
-1           2     Global Goods Inc.      Jane Smith  ...     Canada    4.3      2024-11-19
-2           3   GreenTech Solutions  Robert Johnson  ...         UK    4.6      2024-11-18
-3           4              EuroWare     Emily White  ...    Germany    4.2      2024-11-22
-4           5      Pacific Products   Michael Brown  ...  Australia    4.7      2024-11-17
-5           6     Fresh Produce Co.    Sarah Taylor  ...     France    4.4      2024-11-21
-6           7  TechCore Electronics       David Lee  ...      Japan    4.9      2024-11-23
-7           8       HanYang Trading      Laura King  ...      China    4.1      2024-11-16
-8           9         Indo Supplies  James Williams  ...      India    4.3      2024-11-25
-9          10         LatAm Imports   Olivia Harris  ...     Mexico    4.5      2024-11-20
-
-[10 rows x 8 columns]
-2026-05-21 08:50:51,538-INFO-actual data   supplier_id         supplier_name    contact_name  ...    country rating last_order_date
-0           1      ABC Distributors        John Doe  ...        USA    4.8      2024-11-20
-1           2     Global Goods Inc.      Jane Smith  ...     Canada    4.3      2024-11-19
-2           3   GreenTech Solutions  Robert Johnson  ...         UK    4.6      2024-11-18
-3           4              EuroWare     Emily White  ...    Germany    4.2      2024-11-22
-4           5      Pacific Products   Michael Brown  ...  Australia    4.7      2024-11-17
-5           6     Fresh Produce Co.    Sarah Taylor  ...     France    4.4      2024-11-21
-6           7  TechCore Electronics       David Lee  ...      Japan    4.9      2024-11-23
-7           8       HanYang Trading      Laura King  ...      China    4.1      2024-11-16
-8           9         Indo Supplies  James Williams  ...      India    4.3      2024-11-25
-9          10         LatAm Imports   Olivia Harris  ...     Mexico    4.5      2024-11-20
-
-[10 rows x 8 columns]
-2026-05-21 08:50:51,548-INFO-test_data_extraction_from_supplier_to_stage passed
-2026-05-21 08:50:51,551-INFO-Mysql databse connection has been closed..
+2026-05-22 08:40:10,000-INFO-Mysql databse connection is being established..
+2026-05-22 08:40:10,083-INFO-Mysql databse connection has been successfully established..
+2026-05-22 08:40:10,084-ERROR-error while performing duplicate check DataQualityUtility.check_duplicate_in_file() missing 1 required positional argument: 'file_type'
+2026-05-22 08:40:10,085-INFO-Mysql databse connection has been closed..

@@ -173,3 +173,99 @@ class ValidationUtility(BaseUtility):
             return df
         except Exception as e:
             logger.error(f"S3 file read failed {e}")
+
+# LINUX SERVER UTILITY CLASS
+class LinuxServerUtility(BaseUtility):
+
+    def download_file_from_linux_server(self):
+        try:
+            logger.info(
+                "Linux file download started"
+            )
+            ssh_client = paramiko.SSHClient()
+            ssh_client.set_missing_host_key_policy(
+                paramiko.AutoAddPolicy()
+            )
+            ssh_client.connect(LIUNX_HOSTNAME,username=LIUNX_USERNAME,password=LIUNX_PASSWORD)
+            sftp = ssh_client.open_sftp()
+            sftp.get(REMOTE_FILE_PATH,LOCAL_FILE_PATH)
+            sftp.close()
+            logger.info( "Linux file download completed")
+        except Exception as e:
+            logger.error(f"Linux file download failed : {e}")
+        finally:
+            logger.info( "Finally block executed" )
+
+class DataQualityUtility(BaseUtility):
+
+    # Duplicate checks
+    def check_duplicate_in_file(self,file_path,file_type):
+        try:
+            df = self.read_file(file_path,file_type)
+            if df.duplicated().any():
+                return False
+            return True
+        except Exception as e:
+            logger.error(f"Duplicate check failed : {e}")
+
+    # Assignment:
+    def check_duplicate_in_database(self,db_name,query):
+        pass
+
+    def check_duplicate_for_specific_column_in_file(self, file_path, file_type,column_name):
+        try:
+            df = self.read_file(file_path, file_type)
+            if df[column_name].duplicated().any():
+                return False
+            return True
+        except Exception as e:
+            logger.error(f"Column Duplicate check failed : {e}")
+
+    # Assignment:
+    def check_duplicate_for_specific_column_in_database(self,db_name,query,column_name):
+        pass
+
+
+
+     # Null value checks
+    def check_null_values_in_file(self, file_path, file_type):
+        try:
+            df = self.read_file(file_path, file_type)
+            if df.isnull().values().any():
+                return False
+            return True
+        except Exception as e:
+            logger.error(f"Null value check failed : {e}")
+
+    def check_null_values_for_specific_column(self, file_path, file_type,column_name):
+        try:
+            df = self.read_file(file_path, file_type)
+            if df[column_name].isnull().values().any():
+                return False
+            return True
+        except Exception as e:
+            logger.error(f"Column - Null value check failed : {e}")
+
+
+        # Assignment:
+    def check_null_in_database(self, db_name, query):
+        pass
+
+    def check_null_for_specific_column_in_database(self, db_name, query, column_name):
+        pass
+
+
+    # To be implemeted in next class
+    '''
+    def check_referential_integrity(
+            self,
+            source_db_conn,
+            target_db_conn,
+            foreign_query,
+            primary_query,
+            key_column,
+            csv_path):
+        try:
+            foreign_df = pd.read_sql(foreign_query, source_db_conn)
+            primary_df = pd.read_sql(primary_query,target_db_conn)
+        '''
