@@ -1,0 +1,7 @@
+INFO     conftest:conftest.py:20 Mysql databse connection is being established..
+INFO     conftest:conftest.py:23 Mysql databse connection has been successfully established..
+INFO     test_scripts.test_data_quality:test_data_quality.py:30 test case : test_data_quality_duplicate_check_for_product_data_csv_file started ...
+INFO     test_scripts.test_data_quality:test_data_quality.py:32 Duplicate status is : False
+ERROR    test_scripts.test_data_quality:test_data_quality.py:36 error while performing duplicate check There are duplicate in the product file
+assert False is True
+INFO     conftest:conftest.py:26 Mysql databse connection has been closed..
