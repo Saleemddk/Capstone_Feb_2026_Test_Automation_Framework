@@ -1,7 +1,35 @@
-2026-05-22 10:16:25,057-INFO-Mysql databse connection is being established..
-2026-05-22 10:16:25,140-INFO-Mysql databse connection has been successfully established..
-2026-05-22 10:16:25,140-INFO-test case : test_data_quality_duplicate_check_for_product_data_csv_file started ...
-2026-05-22 10:16:25,140-INFO-Duplicate status is : False
-2026-05-22 10:16:25,140-ERROR-error while performing duplicate check There are duplicate in the product file
-assert False is True
-2026-05-22 10:16:25,473-INFO-Mysql databse connection has been closed..
+2026-05-27 11:22:20,273-INFO-Mysql databse connection is being established..
+2026-05-27 11:22:20,343-INFO-Mysql databse connection has been successfully established..
+2026-05-27 11:22:20,343-ERROR-Schema validation check for column_names name 'schema_validation' is not defined
+2026-05-27 11:22:20,343-INFO-Mysql databse connection has been closed..
+2026-05-27 11:22:20,343-INFO-Mysql databse connection is being established..
+2026-05-27 11:22:20,364-INFO-Mysql databse connection has been successfully established..
+2026-05-27 11:22:20,364-ERROR-Schema data types check for fact_sales name 'schema_validation' is not defined
+2026-05-27 11:22:20,364-INFO-Mysql databse connection has been closed..
+2026-05-27 11:22:20,364-INFO-Mysql databse connection is being established..
+2026-05-27 11:22:20,393-INFO-Mysql databse connection has been successfully established..
+2026-05-27 11:22:20,393-INFO-Mysql databse connection has been closed..
+2026-05-27 11:22:20,393-INFO-Mysql databse connection is being established..
+2026-05-27 11:22:20,409-INFO-Mysql databse connection has been successfully established..
+2026-05-27 11:22:20,409-INFO-Mysql databse connection has been closed..
+2026-05-27 11:22:20,422-INFO-Mysql databse connection is being established..
+2026-05-27 11:22:20,440-INFO-Mysql databse connection has been successfully established..
+2026-05-27 11:22:20,448-INFO-Mysql databse connection has been closed..
+2026-05-27 11:22:20,448-INFO-Mysql databse connection is being established..
+2026-05-27 11:22:20,464-INFO-Mysql databse connection has been successfully established..
+2026-05-27 11:22:20,464-INFO-Mysql databse connection has been closed..
+2026-05-27 11:22:20,464-INFO-Mysql databse connection is being established..
+2026-05-27 11:22:20,483-INFO-Mysql databse connection has been successfully established..
+2026-05-27 11:22:20,489-INFO-Mysql databse connection has been closed..
+2026-05-27 11:22:20,492-INFO-Mysql databse connection is being established..
+2026-05-27 11:22:20,516-INFO-Mysql databse connection has been successfully established..
+2026-05-27 11:22:20,521-INFO-Mysql databse connection has been closed..
+2026-05-27 11:22:20,521-INFO-Mysql databse connection is being established..
+2026-05-27 11:22:20,540-INFO-Mysql databse connection has been successfully established..
+2026-05-27 11:22:20,589-INFO-Mysql databse connection has been closed..
+2026-05-27 11:22:20,589-INFO-Mysql databse connection is being established..
+2026-05-27 11:22:20,599-INFO-Mysql databse connection has been successfully established..
+2026-05-27 11:22:20,601-INFO-Mysql databse connection has been closed..
+2026-05-27 11:22:20,603-INFO-Mysql databse connection is being established..
+2026-05-27 11:22:20,633-INFO-Mysql databse connection has been successfully established..
+2026-05-27 11:22:20,635-INFO-Mysql databse connection has been closed..

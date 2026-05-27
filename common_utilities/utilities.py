@@ -7,6 +7,7 @@ import cx_Oracle
 import logging
 import paramiko
 from test_configuration.etlconfig import *
+import os
 
 
 logging.basicConfig(
@@ -255,17 +256,58 @@ class DataQualityUtility(BaseUtility):
         pass
 
 
-    # To be implemeted in next class
-    '''
-    def check_referential_integrity(
-            self,
-            source_db_conn,
-            target_db_conn,
-            foreign_query,
-            primary_query,
-            key_column,
-            csv_path):
+# FILE UTILITY CHECKS
+
+class FileUtility(BaseUtility):
+    def check_file_existence(self,file_path):
         try:
-            foreign_df = pd.read_sql(foreign_query, source_db_conn)
-            primary_df = pd.read_sql(primary_query,target_db_conn)
-        '''
+            return os.path.isfile(file_path)
+        except Exception as e:
+            logger.error(f"File existence check fails {e}")
+
+    def check_file_size(self, file_path):
+        try:
+            return os.path.getsize(file_path)>0
+        except Exception as e:
+            logger.error(f"File size check fails {e}")
+
+
+class SchemaValidationUtility(BaseUtility):
+    def validate_column_names(self,engine,table_name,expected_columns):
+        query = f"SELECT * FROM {table_name}"
+        df = pd.read_sql(query,engine)
+        actual_columns = list(df.columns)
+        assert actual_columns == expected_columns,(
+            f"\nColumn mismatch in table {table_name}"
+            f"\expected cplumns: {expected_columns}"
+            f"\actual cplumns: {actual_columns}"
+        )
+
+    def validate_column_datatypes(self,engine,table_name,expected_datatypes):
+            query = f"SELECT * FROM {table_name}"
+            df = pd.read_sql(query,engine)
+            for column_name,allowed_datatypes in expected_datatypes.item():
+                actual_data_type = df[column_name].dtype
+                assert actual_data_type in allowed_datatypes,(
+                    f"\ndataype mismatch in table {table_name}"
+                    f"\Column: {column_name}"
+                    f"\actual datatype: {actual_data_type}"
+                    f"\expected datatype: {allowed_datatypes}"
+                )
+   
+    def check_referential_integrity(
+                self,
+                source_db_conn,
+                target_db_conn,
+                foreign_query,
+                primary_query,
+                key_column,
+                csv_path):
+            try:
+                foreign_df = pd.read_sql(foreign_query, source_db_conn)
+                primary_df = pd.read_sql(primary_query,target_db_conn)
+                df_not_matched = foreign_df[~foreign_df[key_column].isin(primary_df[key_column])]
+                df_not_matched.to_csv(csv_path,index=False)
+                return df_not_matched
+            except Exception as e:
+                logger.error(f"Referential Integerity check fails {e}")

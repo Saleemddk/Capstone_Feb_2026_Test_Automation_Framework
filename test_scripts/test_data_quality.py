@@ -23,6 +23,8 @@ logger = logging.getLogger(__name__)
 class TestDataQuality:
     validation_utility = ValidationUtility()
     data_quality_utility = DataQualityUtility()
+    file_utility = FileUtility()
+
 
     def test_data_quality_duplicate_check_for_product_data_csv_file(self,connect_to_mysql_database):
         try:
@@ -35,3 +37,50 @@ class TestDataQuality:
         except Exception as e:
             logger.error(f"error while performing duplicate check {e}")
             pytest.fail()
+
+     # File existence check
+    def test_data_quality_file_existence_of_product_data_csv_file(self):
+                test_case_name = inspect.currentframe().f_code.co_name
+                logger.info(f"test case : {test_case_name} started ...")
+                try:
+                    file_status = (self.file_utility.check_file_existence("test_data/product_data_from_linux.csv"))
+                    assert file_status is True,"product_data.json file does not exist"
+                    logger.info(f"test case : {test_case_name} completed ...")
+                except Exception as e:
+                    logger.error(f"error while performing file existence check {e}")
+                    pytest.fail()
+
+
+# Assignmnet : Implement below test cases
+    def test_data_quality_file_existence_of_inventory_data_xml_file(self):
+        pass
+
+    def test_data_quality_file_existence_of_sales_data_file(self):
+        pass
+
+    def test_data_quality_file_existence_of_supplier_data_file(self):
+        pass
+
+
+    def test_data_quality_file_existence_of_product_data_csv_file(self):
+        pass
+
+    # File size check
+    def test_data_quality_file_size_of_product_data_csv_file(self):
+        try:
+            file_size_status = (self.file_utility. check_file_size( "test_data/product_data_from_linux.csv") )
+            assert file_size_status is True, \
+                "sales_data.csv is empty"
+        except Exception as e:
+            logger.error(f"Error while checking file size : {e}")
+            pytest.fail( "Error while checking file size")
+
+    # Assignmnet : Implement below test cases
+    def test_data_quality_file_size_of_invenorty_data_xml_file(self):
+        pass
+
+    def test_data_quality_file_size_of_supplier_data_json_file(self):
+        pass
+
+    def test_data_quality_file_size_of_sales_data_csv_file(self):
+        pass
