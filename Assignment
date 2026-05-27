@@ -1,4 +1,6 @@
 Complete all the assignments from :
 - Extrcation, Transfromation , Loading and Utilities
-- Implement schema validation for remaining 3 target tables
+- Implement schema validation : column names checks for remaining 3 target tables
+- Implement schema validation : column dataypes checks for remaining 3 target tables
 - Implement file existence  check validation for remaining 3 file
+- Implement file size  check validation for remaining 3 file
