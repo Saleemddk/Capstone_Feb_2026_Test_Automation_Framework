@@ -1,7 +1,7 @@
-2026-05-28 08:10:03,314-INFO-Mysql databse connection is being established..
-2026-05-28 08:10:03,618-INFO-Mysql databse connection has been successfully established..
-2026-05-28 08:10:03,926-INFO-expected data   supplier_id         supplier_name 2026-05-28 08:10:04,871-INFO-Oracle databse connection has been successfully established..
-2026-05-28 08:10:04,966-INFO-actual data   store_id    store_name
+INFO     conftest:conftest.py:20 Mysql databse connection is being established..
+INFO     conftest:conftest.py:23 Mysql databse connection has been successfully established..
+INFO     common_utilities.utilities:utilities.py:87 expected data   supplier_id    INFO     conftest:conftest.py:34 Oracle databse connection has been successfully established..
+INFO     common_utilities.utilities:utilities.py:114 actual data   store_id    store_name
 0        1       Walmart
 1        2        Target
 2        3      Best Buy
@@ -12,7 +12,7 @@
 7        8          IKEA
 8        9     Walgreens
 9       10  CVS Pharmacy
-2026-05-28 08:10:04,999-INFO-actual data   store_id    store_name
+INFO     common_utilities.utilities:utilities.py:118 actual data   store_id    store_name
 0        1       Walmart
 1        2        Target
 2        3      Best Buy
@@ -23,25 +23,23 @@
 7        8          IKEA
 8        9     Walgreens
 9       10  CVS Pharmacy
-2026-05-28 08:10:05,030-INFO-test_data_extraction_from_store_table_data_to_stage passed
-2026-05-28 08:10:05,033-INFO-Oracle databse connection has been closed..
-2026-05-28 08:10:05,035-INFO-Mysql databse connection has been closed..
-2026-05-28 08:10:05,047-INFO-Mysql databse connection is being established..
-2026-05-28 08:10:05,068-INFO-Mysql databse connection has been successfully established..
-2026-05-28 08:10:05,071-ERROR-Schema validation check for column_names name 'schema_validation' is not defined
-2026-05-28 08:10:05,076-INFO-Mysql databse connection has been closed..
-      9         Indo Supplies  ...    4.3      2024-11-25
-9          10         LatAm Imports  ...    4.5      2024-11-20
+INFO     common_utilities.utilities:utilities.py:132 test_data_extraction_from_store_table_data_to_stage passed
+INFO     conftest:conftest.py:37 Oracle databse connection has been closed..
+INFO     conftest:conftest.py:26 Mysql databse connection has been closed..
+INFO     conftest:conftest.py:20 Mysql databse connection is being established..
+INFO     conftest:conftest.py:23 Mysql databse connection has been successfully established..
+ERROR    test_scripts.test_schema_validation:test_schema_validation.py:38 Schema validation check for column_names name 'schema_validation' is not defined
+INFO     conftest:conftest.py:26 Mysql databse connection has been closed..
+.    4.5      2024-11-20
 
 [10 rows x 8 columns]
-2026-05-28 08:10:04,173-INFO-test_data_extraction_from_supplier_to_stage passed
-2026-05-28 08:10:04,178-INFO-Mysql databse connection has been closed..
-2026-05-28 08:10:04,189-INFO-Mysql databse connection is being established..
-2026-05-28 08:10:04,207-INFO-Mysql databse connection has been successfully established..
-2026-05-28 08:10:04,211-ERROR-Schema data types check for fact_sales name 'schema_validation' is not defined
-2026-05-28 08:10:04,215-INFO-Mysql databse connection has been closed..
-109        8       10  22.0  2025-10-09   High
-30       40        110        9        6  26.0  2025-10-10    Low
+INFO     common_utilities.utilities:utilities.py:102 test_data_extraction_from_supplier_to_stage passed
+INFO     conftest:conftest.py:26 Mysql databse connection has been closed..
+INFO     conftest:conftest.py:20 Mysql databse connection is being established..
+INFO     conftest:conftest.py:23 Mysql databse connection has been successfully established..
+ERROR    test_scripts.test_schema_validation:test_schema_validation.py:60 Schema data types check for fact_sales name 'schema_validation' is not defined
+INFO     conftest:conftest.py:26 Mysql databse connection has been closed..
+    Low
 31       41        101        3        5  15.0  2025-10-11   High
 32       42        102        4        4  20.0  2025-10-12    Low
 33       43        103        5        9  19.0  2025-10-13   High
@@ -53,7 +51,7 @@
 39       49        109        2       11  18.5  2025-10-19   High
 40       50        110        3       12  21.0  2025-10-20    Low
 41       60        110        4        9  17.0  2025-09-10    Low
-2026-05-28 08:10:03,919-INFO-actual data    sales_id product_id store_id quantity price   sale_date region
+INFO     common_utilities.utilities:utilities.py:118 actual data    sales_id product_id store_id quantity price   sale_date region
 0        10        110        4        9  17.0  2025-09-10    Low
 1        11        101        4       15  14.0  2025-09-11   High
 2        12        102        5        9  27.0  2025-09-12    Low
@@ -96,5 +94,5 @@
 39       49        109        2       11  18.5  2025-10-19   High
 40       50        110        3       12  21.0  2025-10-20    Low
 41       60        110        4        9  17.0  2025-09-10    Low
-2026-05-28 08:10:03,971-INFO-test_data_transformation_filter_sales passed
-2026-05-28 08:10:03,976-INFO-Mysql databse connection has been closed..
+INFO     common_utilities.utilities:utilities.py:132 test_data_transformation_filter_sales passed
+INFO     conftest:conftest.py:26 Mysql databse connection has been closed..

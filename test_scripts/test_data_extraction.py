@@ -34,7 +34,7 @@ class TestDataExtraction:
             self.validation_utility.execute_validation(
                 validation_type="FILE_TO_DB",
                 test_case_name = test_case_name,
-                file_path="test_data/supplier_data1.json",
+                file_path="test_data/supplier_data.json",
                 file_type="json",
                 query_actual=actual_query,
                 db_actual=connect_to_mysql_database)
