@@ -24,6 +24,7 @@ class TestSchemaValidation:
     validation_utility = ValidationUtility()
     schema_validation = SchemaValidationUtility()
 
+    @pytest.mark.smoke
     def test_fact_sales_table_schema_column_names(self,connect_to_mysql_database):
         try:
             expected_columns = ['sales_id', 'product_id', 'store_id', 'quantity', 'total_sales', 'sale_date']
@@ -36,6 +37,8 @@ class TestSchemaValidation:
         except Exception as e:
             logger.error(f"Schema validation check for column_names {e}")
 
+    @pytest.mark.smoke
+    @pytest.mark.regression
     def test_fact_sales_table_schema_data_types(self, connect_to_mysql_database):
             try:
                 expected_datatypes = {

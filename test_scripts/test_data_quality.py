@@ -25,7 +25,7 @@ class TestDataQuality:
     data_quality_utility = DataQualityUtility()
     file_utility = FileUtility()
 
-
+    @pytest.mark.regression
     def test_data_quality_duplicate_check_for_product_data_csv_file(self,connect_to_mysql_database):
         try:
             test_case_name = inspect.currentframe().f_code.co_name
@@ -39,6 +39,7 @@ class TestDataQuality:
             pytest.fail()
 
      # File existence check
+    @pytest.mark.regression
     def test_data_quality_file_existence_of_product_data_csv_file(self):
                 test_case_name = inspect.currentframe().f_code.co_name
                 logger.info(f"test case : {test_case_name} started ...")
@@ -66,6 +67,8 @@ class TestDataQuality:
         pass
 
     # File size check
+    @pytest.mark.regression
+    @pytest.mark.smoke
     def test_data_quality_file_size_of_product_data_csv_file(self):
         try:
             file_size_status = (self.file_utility. check_file_size( "test_data/product_data_from_linux.csv") )

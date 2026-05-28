@@ -23,6 +23,7 @@ logger = logging.getLogger(__name__)
 class TestDataTransformation:
     validation_utility = ValidationUtility()
 
+    @pytest.mark.smoke
     def test_data_transformation_filter_sales(self,connect_to_mysql_database):
         try:
             test_case_name = inspect.currentframe().f_code.co_name
@@ -44,6 +45,7 @@ class TestDataTransformation:
         except Exception as e:
             logger.error(f"Error while validating filter transfromatio : {e}")
 
+    @pytest.mark.regression
     def test_data_transformation_router_high_sales(self,connect_to_mysql_database):
         try:
             test_case_name = inspect.currentframe().f_code.co_name

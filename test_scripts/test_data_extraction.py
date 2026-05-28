@@ -24,6 +24,9 @@ class TestDataExtraction:
     validation_utility = ValidationUtility()
     linux_utility = LinuxServerUtility()
 
+    @pytest.mark.smoke
+    @pytest.mark.regression
+    @pytest.mark.order(5)
     def test_data_extraction_from_supplier_to_stage(self,connect_to_mysql_database):
         try:
             test_case_name = inspect.currentframe().f_code.co_name
@@ -31,13 +34,14 @@ class TestDataExtraction:
             self.validation_utility.execute_validation(
                 validation_type="FILE_TO_DB",
                 test_case_name = test_case_name,
-                file_path="test_data/supplier_data.json",
+                file_path="test_data/supplier_data1.json",
                 file_type="json",
                 query_actual=actual_query,
                 db_actual=connect_to_mysql_database)
         except Exception as e:
             logger.error(f"supplier data extrcation valodation failed {e}")
 
+    @pytest.mark.order(3)
     def test_data_extraction_from_product_data_to_stage(self,connect_to_mysql_database):
             try:
                 test_case_name = inspect.currentframe().f_code.co_name
@@ -73,6 +77,8 @@ class TestDataExtraction:
                     f"Product data extraction validation failed : {e}"
                 )
 
+    @pytest.mark.smoke
+    @pytest.mark.order(2)
     def test_data_extraction_from_store_table_data_to_stage(self,connect_to_oracle_database,connect_to_mysql_database):
         try:
             test_case_name = inspect.currentframe().f_code.co_name
@@ -97,8 +103,10 @@ class TestDataExtraction:
 
 
   # Assignments
+    @pytest.mark.order(4)
     def test_data_extraction_from_inventory_data_to_stage(self, connect_to_mysql_database):
         pass
 
+    @pytest.mark.order(1)
     def test_data_extraction_from_sales_data_to_stage(self, connect_to_mysql_database):
         pass

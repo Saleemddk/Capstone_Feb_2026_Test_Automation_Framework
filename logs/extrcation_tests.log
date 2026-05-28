@@ -1,223 +1,41 @@
-2026-05-27 11:23:54,079-INFO-Mysql databse connection is being established..
-2026-05-27 11:23:54,143-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:23:54,369-INFO-expected data   supplier_id         supplier_name    contact_name  ...    country rating last_order_date
-0           1      ABC Distributors        John Doe  ...        USA    4.8      2024-11-20
-1           2     Global Goods Inc.      Jane Smith  ...     Canada    4.3      2024-11-19
-2           3   GreenTech Solutions  Robert Johnson  ...         UK    4.6      2024-11-18
-3           4              EuroWare     Emily White  ...    Germany    4.2      2024-11-22
-4           5      Pacific Products   Michael Brown  ...  Australia    4.7      2024-11-17
-5           6     Fresh Produce Co.    Sarah Taylor  ...     France    4.4      2024-11-21
-6           7  TechCore Electronics       David Lee  ...      Japan    4.9      2024-11-23
-7           8       HanYang Trading      Laura King  ...      China    4.1      2024-11-16
-8           9         Indo Supplies  James Williams  ...      India    4.3      2024-11-25
-9          10         LatAm Imports   Olivia Harris  ...     Mexico    4.5      2024-11-20
-
-[10 rows x 8 columns]
-2026-05-27 11:23:54,434-INFO-actual data   supplier_id         supplier_name    contact_name  ...    country rating last_order_date
-0           1      ABC Distributors        John Doe  ...        USA    4.8      2024-11-20
-1           2     Global Goods Inc.      Jane Smith  ...     Canada    4.3      2024-11-19
-2           3   GreenTech Solutions  Robert Johnson  ...         UK    4.6      2024-11-18
-3           4              EuroWare     Emily White  ...    Germany    4.2      2024-11-22
-4           5      Pacific Products   Michael Brown  ...  Australia    4.7      2024-11-17
-5           6     Fresh Produce Co.    Sarah Taylor  ...     France    4.4      2024-11-21
-6           7  TechCore Electronics       David Lee  ...      Japan    4.9      2024-11-23
-7           8       HanYang Trading      Laura King  ...      China    4.1      2024-11-16
-8           9         Indo Supplies  James Williams  ...      India    4.3      2024-11-25
-9          10         LatAm Imports   Olivia Harris  ...     Mexico    4.5      2024-11-20
-
-[10 rows x 8 columns]
-2026-05-27 11:23:54,468-INFO-test_data_extraction_from_supplier_to_stage passed
-2026-05-27 11:23:54,468-INFO-Mysql databse connection has been closed..
-2026-05-27 11:23:54,478-INFO-Mysql databse connection is being established..
-2026-05-27 11:23:54,485-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:23:54,485-INFO-Linux file download started
-2026-05-27 11:23:58,042-ERROR-Linux file download failed : [Errno None] Unable to connect to port 22 on 192.168.0.5
-2026-05-27 11:23:58,047-INFO-Finally block executed
-2026-05-27 11:23:58,106-INFO-expected data   product_id        product_name     category price stock_quantity    brand rating
-0        101           iPhone 15  Smartphones   999             50    Apple    4.8
-1        102  Samsung Galaxy S23  Smartphones   899             75  Samsung    4.7
-2        103         Dell XPS 13      Laptops  1200             30     Dell    4.6
-3        104      MacBook Pro 14      Laptops  2000             25    Apple    4.9
-4        105     Sony WH-1000XM5   Headphones   350            100     Sony    4.7
-5        106       Nike Air Zoom     Sneakers   120            200     Nike    4.5
-6        107      Samsung 55" TV  Electronics   700             40  Samsung    4.4
-7        108    Philips Hue Bulb   Smart Home    50            500  Philips    4.8
-8        109     Fitbit Charge 5    Wearables   150            150   Fitbit    4.6
-9        110   Kindle Paperwhite     eReaders   130             80   Amazon    4.7
-2026-05-27 11:23:58,142-INFO-actual data   product_id        product_name     category price stock_quantity    brand rating
-0        101           iPhone 15  Smartphones   999             50    Apple    4.8
-1        102  Samsung Galaxy S23  Smartphones   899             75  Samsung    4.7
-2        103         Dell XPS 13      Laptops  1200             30     Dell    4.6
-3        104      MacBook Pro 14      Laptops  2000             25    Apple    4.9
-4        105     Sony WH-1000XM5   Headphones   350            100     Sony    4.7
-5        106       Nike Air Zoom     Sneakers   120            200     Nike    4.5
-6        107      Samsung 55" TV  Electronics   700             40  Samsung    4.4
-7        108    Philips Hue Bulb   Smart Home    50            500  Philips    4.8
-8        109     Fitbit Charge 5    Wearables   150            150   Fitbit    4.6
-9        110   Kindle Paperwhite     eReaders   130             80   Amazon    4.7
-2026-05-27 11:23:58,150-INFO-test_data_extraction_from_product_data_to_stage passed
-2026-05-27 11:23:58,150-INFO-Mysql databse connection has been closed..
-2026-05-27 11:23:58,150-INFO-Mysql databse connection is being established..
-2026-05-27 11:23:58,168-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:23:58,168-INFO-Oracle databse connection is being established..
-2026-05-27 11:24:02,601-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:02,602-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:02,626-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:02,626-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:02,626-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:02,657-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:02,657-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:02,657-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:02,672-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:02,879-INFO-actual data    product_id  year month total_sales
-0         101  2025     9       427.0
-1         101  2025    10       263.5
-2         102  2025     9       419.0
-3         102  2025    10       254.0
-4         103  2025     9       346.0
-5         103  2025    10       339.0
-6         104  2025     9       398.0
-7         104  2025    10       346.0
-8         105  2025     9       294.0
-9         105  2025    10       355.0
-10        106  2025     9       220.0
-11        106  2025    10       255.0
-12        107  2025     9       268.0
-13        107  2025    10       360.0
-14        108  2025     9       330.0
-15        108  2025    10       261.0
-16        109  2025     9       436.0
-17        109  2025    10       423.5
-18        110  2025     9       646.0
-19        110  2025    10       408.0
-2026-05-27 11:24:02,920-INFO-actual data    product_id  year month total_sales
-0         101  2025     9       427.0
-1         101  2025    10       263.5
-2         102  2025     9       419.0
-3         102  2025    10       254.0
-4         103  2025     9       346.0
-5         103  2025    10       339.0
-6         104  2025     9       398.0
-7         104  2025    10       346.0
-8         105  2025     9       294.0
-9         105  2025    10       355.0
-10        106  2025     9       220.0
-11        106  2025    10       255.0
-12        107  2025     9       268.0
-13        107  2025    10       360.0
-14        108  2025     9       330.0
-15        108  2025    10       261.0
-16        109  2025     9       436.0
-17        109  2025    10       423.5
-18        110  2025     9       646.0
-19        110  2025    10       408.0
-2026-05-27 11:24:02,936-INFO-test_data_loading_monthly_sales_summary passed
-2026-05-27 11:24:02,944-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:02,944-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:02,969-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:03,033-INFO-actual data    product_id store_id quantity_on_hand last_updated
-0         101        1               50   2024-09-01
-1         101        4               50   2024-09-11
-2         101        7              160   2024-10-01
-3         101        9               65   2024-09-21
-4         102        1               30   2024-09-02
-5         102        4               40   2024-09-12
-6         102        8              170   2024-10-02
-7         102        9               75   2024-09-22
-8         103        2               40   2024-09-03
-9         103        5               30   2024-09-13
-10        103        9              180   2024-10-03
-11        103       10               80   2024-09-23
-12        104        5               20   2024-09-14
-13        104       10               90   2024-09-24
-14        105        6               50   2024-09-15
-15        106        2              110   2024-09-26
-16        106        3               25   2024-09-06
-17        106        6               60   2024-09-16
-18        107        1               35   2024-09-07
-19        107        3              120   2024-09-27
-20        107        7               30   2024-09-17
-21        108        2               45   2024-09-08
-22        108        4              130   2024-09-28
-23        108        7               40   2024-09-18
-24        109        3               55   2024-09-09
-25        109        5              140   2024-09-29
-26        109        8               45   2024-09-19
-27        110        3               65   2024-09-10
-28        110        6              150   2024-09-30
-29        110        8               55   2024-09-20
-2026-05-27 11:24:03,077-INFO-actual data    product_id store_id quantity_on_hand last_updated
-0         101        1               50   2024-09-01
-1         101        4               50   2024-09-11
-2         101        7              160   2024-10-01
-3         101        9               65   2024-09-21
-4         102        1               30   2024-09-02
-5         102        4               40   2024-09-12
-6         102        8              170   2024-10-02
-7         102        9               75   2024-09-22
-8         103        2               40   2024-09-03
-9         103        5               30   2024-09-13
-10        103        9              180   2024-10-03
-11        103       10               80   2024-09-23
-12        104        5               20   2024-09-14
-13        104       10               90   2024-09-24
-14        105        6               50   2024-09-15
-15        106        2              110   2024-09-26
-16        106        3               25   2024-09-06
-17        106        6               60   2024-09-16
-18        107        1               35   2024-09-07
-19        107        3              120   2024-09-27
-20        107        7               30   2024-09-17
-21        108        2               45   2024-09-08
-22        108        4              130   2024-09-28
-23        108        7               40   2024-09-18
-24        109        3               55   2024-09-09
-25        109        5              140   2024-09-29
-26        109        8               45   2024-09-19
-27        110        3               65   2024-09-10
-28        110        6              150   2024-09-30
-29        110        8               55   2024-09-20
-2026-05-27 11:24:03,089-INFO-test_data_loading_fact_inventory passed
-2026-05-27 11:24:03,102-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:03,105-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:03,138-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:03,145-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:03,149-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:03,175-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:03,175-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:03,175-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:03,187-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:03,187-INFO-test case : test_data_quality_duplicate_check_for_product_data_csv_file started ...
-2026-05-27 11:24:03,205-INFO-Duplicate status is : True
-2026-05-27 11:24:03,205-INFO-test case : test_data_quality_duplicate_check_for_product_data_csv_file completed ...
-2026-05-27 11:24:03,205-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:03,217-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:03,233-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:03,233-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:03,233-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:03,251-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:03,258-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:03,258-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:03,282-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:03,282-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:03,282-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:03,302-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:03,302-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:03,316-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:03,329-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:03,346-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:03,352-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:03,369-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:03,382-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:03,389-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:03,426-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:03,432-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:03,435-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:03,457-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:03,457-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:03,465-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:03,514-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:03,598-INFO-actual data    sales_id product_id store_id quantity price   sale_date region
+2026-05-28 07:30:14,387-INFO-Mysql databse connection is being established..
+2026-05-28 07:30:14,505-INFO-Mysql databse connection has been successfully established..
+2026-05-28 07:30:14,572-INFO-actual data    sales_id product_id store_id quanti2026-05-28 07:30:14,867-INFO-Oracle databse connection has been su2026-05-28 07:30:15,611-INFO-Mysql databse connection has been closed..
+2026-05-28 07:30:19,640-INFO-Mysql databse connection is being established..
+2026-05-28 07:30:19,651-INFO-Mysql databse connection has been successfully established..
+2026-05-28 07:30:19,653-ERROR-test_data_extraction_from_supplier_to_stage validation failed : File test_data/supplier_data1.json does not exist
+2026-05-28 07:30:19,747-INFO-Mysql databse connection has been closed..
+2026-05-28 07:30:23,768-INFO-Mysql databse connection is being established..
+2026-05-28 07:30:23,811-INFO-Mysql databse connection has been successfully established..
+2026-05-28 07:30:23,814-ERROR-test_data_extraction_from_supplier_to_stage validation failed : File test_data/supplier_data1.json does not exist
+2026-05-28 07:30:23,942-INFO-Mysql databse connection has been closed..
+2026-05-28 07:30:27,954-INFO-Mysql databse connection is being established..
+2026-05-28 07:30:27,982-INFO-Mysql databse connection has been successfully established..
+2026-05-28 07:30:27,983-ERROR-test_data_extraction_from_supplier_to_stage validation failed : File test_data/supplier_data1.json does not exist
+2026-05-28 07:30:28,072-INFO-Mysql databse connection has been closed..
+2026-05-28 07:30:28,083-INFO-Mysql databse connection is being established..
+2026-05-28 07:30:28,103-INFO-Mysql databse connection has been successfully established..
+2026-05-28 07:30:28,104-ERROR-Schema data types check for fact_sales name 'schema_validation' is not defined
+2026-05-28 07:30:28,105-INFO-Mysql databse connection has been closed..
+    104        7        5  30.0  2025-10-04    Low
+25       35        105        4        7  15.0  2025-10-05   High
+26       36        106        5        3  25.0  2025-10-06    Low
+27       37        107        6       12  18.0  2025-10-07   High
+28       38        108        7        9  20.0  2025-10-08    Low
+29       39        109        8       10  22.0  2025-10-09   High
+30       40        110        9        6  26.0  2025-10-10    Low
+31       41        101        3        5  15.0  2025-10-11   High
+32       42        102        4        4  20.0  2025-10-12    Low
+33       43        103        5        9  19.0  2025-10-13   High
+34       44        104        6        7  28.0  2025-10-14    Low
+35       45        105        7       10  25.0  2025-10-15   High
+36       46        106        8        8  22.5  2025-10-16    Low
+37       47        107        9        6  24.0  2025-10-17   High
+38       48        108        1        3  27.0  2025-10-18    Low
+39       49        109        2       11  18.5  2025-10-19   High
+40       50        110        3       12  21.0  2025-10-20    Low
+41       60        110        4        9  17.0  2025-09-10    Low
+2026-05-28 07:30:14,621-INFO-actual data    sales_id product_id store_id quantity price   sale_date region
 0        10        110        4        9  17.0  2025-09-10    Low
 1        11        101        4       15  14.0  2025-09-11   High
 2        12        102        5        9  27.0  2025-09-12    Low
@@ -260,188 +78,5 @@
 39       49        109        2       11  18.5  2025-10-19   High
 40       50        110        3       12  21.0  2025-10-20    Low
 41       60        110        4        9  17.0  2025-09-10    Low
-2026-05-27 11:24:03,626-INFO-actual data    sales_id product_id store_id quantity price   sale_date region
-0        10        110        4        9  17.0  2025-09-10    Low
-1        11        101        4       15  14.0  2025-09-11   High
-2        12        102        5        9  27.0  2025-09-12    Low
-3        13        103        6       10  22.0  2025-09-13   High
-4        14        104        7        8  31.0  2025-09-14    Low
-5        15        105        4       12  11.0  2025-09-15   High
-6        16        106        5        5  23.0  2025-09-16    Low
-7        17        107        6        3  26.0  2025-09-17   High
-8        18        108        7        6  28.0  2025-09-18    Low
-9        19        109        8       11  20.0  2025-09-19   High
-10       20        110        9        9  19.5  2025-09-20    Low
-11       21        101        1       14  15.5  2025-09-21   High
-12       22        102        2        8  22.0  2025-09-22    Low
-13       23        103        3        7  18.0  2025-09-23   High
-14       24        104        4        6  25.0  2025-09-24    Low
-15       25        105        2       12  13.5  2025-09-25   High
-16       26        106        3        5  21.0  2025-09-26    Low
-17       27        107        1       10  19.0  2025-09-27   High
-18       28        108        5        6  27.0  2025-09-28    Low
-19       29        109        6        9  24.0  2025-09-29   High
-20       30        110        7        7  23.5  2025-09-30    Low
-21       31        101        4       13  14.5  2025-10-01   High
-22       32        102        5        6  29.0  2025-10-02    Low
-23       33        103        6        8  21.0  2025-10-03   High
-24       34        104        7        5  30.0  2025-10-04    Low
-25       35        105        4        7  15.0  2025-10-05   High
-26       36        106        5        3  25.0  2025-10-06    Low
-27       37        107        6       12  18.0  2025-10-07   High
-28       38        108        7        9  20.0  2025-10-08    Low
-29       39        109        8       10  22.0  2025-10-09   High
-30       40        110        9        6  26.0  2025-10-10    Low
-31       41        101        3        5  15.0  2025-10-11   High
-32       42        102        4        4  20.0  2025-10-12    Low
-33       43        103        5        9  19.0  2025-10-13   High
-34       44        104        6        7  28.0  2025-10-14    Low
-35       45        105        7       10  25.0  2025-10-15   High
-36       46        106        8        8  22.5  2025-10-16    Low
-37       47        107        9        6  24.0  2025-10-17   High
-38       48        108        1        3  27.0  2025-10-18    Low
-39       49        109        2       11  18.5  2025-10-19   High
-40       50        110        3       12  21.0  2025-10-20    Low
-41       60        110        4        9  17.0  2025-09-10    Low
-2026-05-27 11:24:03,642-INFO-test_data_transformation_filter_sales passed
-2026-05-27 11:24:03,642-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:03,658-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:03,675-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:03,714-INFO-actual data    sales_id product_id store_id quantity price   sale_date region
-0        11        101        4       15  14.0  2025-09-11   High
-1        13        103        6       10  22.0  2025-09-13   High
-2        15        105        4       12  11.0  2025-09-15   High
-3        17        107        6        3  26.0  2025-09-17   High
-4        19        109        8       11  20.0  2025-09-19   High
-5        21        101        1       14  15.5  2025-09-21   High
-6        23        103        3        7  18.0  2025-09-23   High
-7        25        105        2       12  13.5  2025-09-25   High
-8        27        107        1       10  19.0  2025-09-27   High
-9        29        109        6        9  24.0  2025-09-29   High
-10       31        101        4       13  14.5  2025-10-01   High
-11       33        103        6        8  21.0  2025-10-03   High
-12       35        105        4        7  15.0  2025-10-05   High
-13       37        107        6       12  18.0  2025-10-07   High
-14       39        109        8       10  22.0  2025-10-09   High
-15       41        101        3        5  15.0  2025-10-11   High
-16       43        103        5        9  19.0  2025-10-13   High
-17       45        105        7       10  25.0  2025-10-15   High
-18       47        107        9        6  24.0  2025-10-17   High
-19       49        109        2       11  18.5  2025-10-19   High
-2026-05-27 11:24:03,746-INFO-actual data    sales_id product_id store_id quantity price   sale_date region
-0        11        101        4       15  14.0  2025-09-11   High
-1        13        103        6       10  22.0  2025-09-13   High
-2        15        105        4       12  11.0  2025-09-15   High
-3        17        107        6        3  26.0  2025-09-17   High
-4        19        109        8       11  20.0  2025-09-19   High
-5        21        101        1       14  15.5  2025-09-21   High
-6        23        103        3        7  18.0  2025-09-23   High
-7        25        105        2       12  13.5  2025-09-25   High
-8        27        107        1       10  19.0  2025-09-27   High
-9        29        109        6        9  24.0  2025-09-29   High
-10       31        101        4       13  14.5  2025-10-01   High
-11       33        103        6        8  21.0  2025-10-03   High
-12       35        105        4        7  15.0  2025-10-05   High
-13       37        107        6       12  18.0  2025-10-07   High
-14       39        109        8       10  22.0  2025-10-09   High
-15       41        101        3        5  15.0  2025-10-11   High
-16       43        103        5        9  19.0  2025-10-13   High
-17       45        105        7       10  25.0  2025-10-15   High
-18       47        107        9        6  24.0  2025-10-17   High
-19       49        109        2       11  18.5  2025-10-19   High
-2026-05-27 11:24:03,763-INFO-test_data_transformation_router_high_sales passed
-2026-05-27 11:24:03,763-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:03,763-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:03,802-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:03,838-INFO-actual data    sales_id product_id store_id quantity price   sale_date region
-0        10        110        4        9  17.0  2025-09-10    Low
-1        12        102        5        9  27.0  2025-09-12    Low
-2        14        104        7        8  31.0  2025-09-14    Low
-3        16        106        5        5  23.0  2025-09-16    Low
-4        18        108        7        6  28.0  2025-09-18    Low
-5        20        110        9        9  19.5  2025-09-20    Low
-6        22        102        2        8  22.0  2025-09-22    Low
-7        24        104        4        6  25.0  2025-09-24    Low
-8        26        106        3        5  21.0  2025-09-26    Low
-9        28        108        5        6  27.0  2025-09-28    Low
-10       30        110        7        7  23.5  2025-09-30    Low
-11       32        102        5        6  29.0  2025-10-02    Low
-12       34        104        7        5  30.0  2025-10-04    Low
-13       36        106        5        3  25.0  2025-10-06    Low
-14       38        108        7        9  20.0  2025-10-08    Low
-15       40        110        9        6  26.0  2025-10-10    Low
-16       42        102        4        4  20.0  2025-10-12    Low
-17       44        104        6        7  28.0  2025-10-14    Low
-18       46        106        8        8  22.5  2025-10-16    Low
-19       48        108        1        3  27.0  2025-10-18    Low
-20       50        110        3       12  21.0  2025-10-20    Low
-21       60        110        4        9  17.0  2025-09-10    Low
-2026-05-27 11:24:03,910-INFO-actual data    sales_id product_id store_id quantity price   sale_date region
-0        10        110        4        9  17.0  2025-09-10    Low
-1        12        102        5        9  27.0  2025-09-12    Low
-2        14        104        7        8  31.0  2025-09-14    Low
-3        16        106        5        5  23.0  2025-09-16    Low
-4        18        108        7        6  28.0  2025-09-18    Low
-5        20        110        9        9  19.5  2025-09-20    Low
-6        22        102        2        8  22.0  2025-09-22    Low
-7        24        104        4        6  25.0  2025-09-24    Low
-8        26        106        3        5  21.0  2025-09-26    Low
-9        28        108        5        6  27.0  2025-09-28    Low
-10       30        110        7        7  23.5  2025-09-30    Low
-11       32        102        5        6  29.0  2025-10-02    Low
-12       34        104        7        5  30.0  2025-10-04    Low
-13       36        106        5        3  25.0  2025-10-06    Low
-14       38        108        7        9  20.0  2025-10-08    Low
-15       40        110        9        6  26.0  2025-10-10    Low
-16       42        102        4        4  20.0  2025-10-12    Low
-17       44        104        6        7  28.0  2025-10-14    Low
-18       46        106        8        8  22.5  2025-10-16    Low
-19       48        108        1        3  27.0  2025-10-18    Low
-20       50        110        3       12  21.0  2025-10-20    Low
-21       60        110        4        9  17.0  2025-09-10    Low
-2026-05-27 11:24:03,919-INFO-test_data_transformation_router_low_sales passed
-2026-05-27 11:24:03,919-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:03,935-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:03,961-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:03,963-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:03,970-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:03,993-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:03,995-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:04,004-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:04,037-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:04,048-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:04,048-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:04,084-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:04,084-ERROR-Schema validation check for column_names name 'schema_validation' is not defined
-2026-05-27 11:24:04,095-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:04,097-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:04,126-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:04,128-ERROR-Schema data types check for fact_sales name 'schema_validation' is not defined
-2026-05-27 11:24:04,128-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:04,136-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:04,156-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:04,160-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:04,162-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:04,184-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:04,202-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:04,204-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:04,217-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:04,231-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:04,234-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:04,264-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:04,280-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:04,280-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:04,304-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:04,312-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:04,312-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:04,356-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:04,361-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:04,361-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:04,393-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:04,424-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:04,424-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:04,467-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:04,473-INFO-Mysql databse connection has been closed..
-2026-05-27 11:24:04,475-INFO-Mysql databse connection is being established..
-2026-05-27 11:24:04,505-INFO-Mysql databse connection has been successfully established..
-2026-05-27 11:24:04,514-INFO-Mysql databse connection has been closed..
+2026-05-28 07:30:14,650-INFO-test_data_transformation_filter_sales passed
+2026-05-28 07:30:14,652-INFO-Mysql databse connection has been closed..
