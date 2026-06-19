@@ -68,6 +68,7 @@ class TestDataQuality:
 
     # File size check
     @pytest.mark.regression
+    @pytest.mark.DataQuality
     @pytest.mark.smoke
     def test_data_quality_file_size_of_product_data_csv_file(self):
         try:
@@ -79,11 +80,14 @@ class TestDataQuality:
             pytest.fail( "Error while checking file size")
 
     # Assignmnet : Implement below test cases
+    @pytest.mark.DataQuality
     def test_data_quality_file_size_of_invenorty_data_xml_file(self):
         pass
 
+    @pytest.mark.DataQuality
     def test_data_quality_file_size_of_supplier_data_json_file(self):
         pass
 
+    @pytest.mark.DataQuality
     def test_data_quality_file_size_of_sales_data_csv_file(self):
         pass
