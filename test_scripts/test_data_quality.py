@@ -86,7 +86,7 @@ class TestDataQuality:
 
     @pytest.mark.DataQuality
     def test_data_quality_file_size_of_supplier_data_json_file(self):
-        pass
+        assert 1==2,"failed"
 
     @pytest.mark.DataQuality
     def test_data_quality_file_size_of_sales_data_csv_file(self):
